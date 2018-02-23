@@ -1,6 +1,5 @@
 // 自带的库
 const path = require('path')
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
     entry:  './src/index.js', // 入口文件
     output: {
@@ -23,17 +22,12 @@ module.exports = {
                 use: [{
                     loader: "style-loader" // 将 JS 字符串生成为 style 节点
                 }, {
-                    loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+                    loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
                 },
-                // {
-                //     loader: 'css-loader', options: { importLoaders: 1 } },
                  {
                     loader: "sass-loader" // 将 Sass 编译成 CSS
                 }]
               }
         ],
-        // plugins: [
-        //     new ExtractTextPlugin('[name].css')
-        //   ]
     },
   }
